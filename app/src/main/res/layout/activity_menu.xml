@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.MenuActivity">
+
+<!--    <include layout="@layout/title"/>-->
+    <com.app.myapplication.ui.view.TitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="启动广播"
+            android:onClick="onClick"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="删除"
+            android:onClick="onClick"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/backall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="退出app"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/forceoffline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="静态广播"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="持久化存储---文件存储方式" />
+        <EditText
+            android:id="@+id/saveData"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="15sp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="SharedPreferences方式见记住账号密码"/>
+    </LinearLayout>
+
+        <!-- <ProgressBar
+             android:id="@+id/progress_circular"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"/>-->
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <Button
+            android:id="@+id/createDatabase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="30dp"
+            android:text="建数据库(并查询)"
+            android:onClick="onClick"
+            android:textAllCaps="false"
+            android:background="@drawable/buttonstyle"/>
+        <Button
+            android:id="@+id/readContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="读取联系人信息"
+            android:onClick="onClick"
+            android:textAllCaps="false"
+            android:minHeight="30dp"
+            android:background="@drawable/buttonstyle"/>
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
