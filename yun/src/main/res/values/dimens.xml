@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="circle_width">1dp</dimen>
+    <dimen name="circle_width_r">-2.5dp</dimen>
+    <dimen name="work_state_icon_height">26dp</dimen>
+    <dimen name="width_title_max_size">110dp</dimen>
+    <dimen name="width_140">140dp</dimen>
+    <dimen name="width_200">200dp</dimen>
+
+    <dimen name="common_login_input_size">15sp</dimen>
+    <dimen name="common_text_12">12sp</dimen>
+    <dimen name="common_text_13">13sp</dimen>
+    <dimen name="common_text_22px">22px</dimen>
+    <dimen name="common_text_30px">40px</dimen>
+    <dimen name="common_text_16">16sp</dimen>
+    <dimen name="common_login_drawable_padding">11dp</dimen>
+    <dimen name="common_login_checkbox_padding">7dp</dimen>
+    <dimen name="common_text_size">15sp</dimen>
+    <dimen name="common_tip_text_size">13sp</dimen>
+    <dimen name="common_padding_with_bg">12dp</dimen>
+    <dimen name="common_bg_with_page">8dp</dimen>
+    <dimen name="common_text_dis">5dp</dimen>
+    <dimen name="common_page_line">2px</dimen>
+    <dimen name="address_tab_height">25dp</dimen>
+    <dimen name="common_btn_height">45dp</dimen>
+    <dimen name="map_pop_offset">30dp</dimen>
+    <dimen name="x20">20dp</dimen>
+    <dimen name="y20">20dp</dimen>
+    <dimen name="y30">30dp</dimen>
+    <dimen name="y60">60dp</dimen>
+    <dimen name="x40">40dp</dimen>
+
+    <integer name="password_maxlength">10</integer>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="foot_hint_fontsize">10sp</dimen>
+
+    <!--插件列表页面-->
+    <dimen name="wy_pluginlist_item_heigh">60dp</dimen>
+    <dimen name="wy_pluginlist_icon_heigh">28dp</dimen>
+    <dimen name="wy_pluginlist_text_size">17sp</dimen>
+
+    <!--首页-->
+    <dimen name="wy_home_map_pop_offset">30dp</dimen>
+    <dimen name="wy_home_sifting_padding">13dp</dimen>
+    <dimen name="wy_home_sifting_item_divider">26dp</dimen>
+    <dimen name="wy_home_sifting_item_textsize">13sp</dimen>
+
+    <dimen name="wy_about_us_text_size">15sp</dimen>
+
+    <!--任务详情页面-->
+    <dimen name="main_txt_size">11sp</dimen>
+    <dimen name="main_txt_size_12">12sp</dimen>
+    <dimen name="main_title_width">84dp</dimen>
+    <dimen name="main_title_height">22dp</dimen>
+    <dimen name="desc_margin_left">24dp</dimen>
+    <dimen name="operation_map_pop_offset">30dp</dimen>
+    <dimen name="operation_text_padding">8dp</dimen>
+    <dimen name="operation_padding_bg_with_page">8dp</dimen>
+    <dimen name="operation_edit_height">50dp</dimen>
+    <dimen name="list_top_padding">4sp</dimen>
+</resources>

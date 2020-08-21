@@ -1,4 +1,4 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 apply plugin: 'kotlin-android'
 
@@ -8,17 +8,26 @@ android {
     compileSdkVersion 29
     buildToolsVersion "30.0.0"
     defaultConfig {
-        applicationId "com.app.myapplication"
+   //     applicationId "com.app.myapplication"
         minSdkVersion 22
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    signingConfigs {
+        config{
+            storeFile file('xieqin.jks')
+            storePassword '123456'
+            keyAlias = 'xieqindev'
+            keyPassword '123456'
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
         }
     }
 }
@@ -31,8 +40,37 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.1.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    //协程
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.1'
+
+    //Navigation View 的滑动菜单页面
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation "androidx.lifecycle:lifecycle-extensions:2.1.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0-alpha05"
+    implementation "androidx.work:work-runtime:2.2.0"
+    implementation 'com.squareup.retrofit2:retrofit:2.6.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.1'
+
+    //栅格布局
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    api 'com.squareup.okhttp3:okhttp:3.10.0'
+    //刷新加载头部和尾部
+    api  'com.scwang.smart:refresh-header-classics:2.0.1'
+    api  'com.scwang.smart:refresh-footer-classics:2.0.1'
+    api  'com.scwang.smart:refresh-layout-kernel:2.0.1'
+
 }

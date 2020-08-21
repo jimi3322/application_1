@@ -1,27 +1,20 @@
 package com.app.myapplication.ui.activity
 
-import android.app.ProgressDialog.show
 import android.content.*
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.app.myapplication.R
 import com.app.myapplication.common.ActivityCollector
 import com.app.myapplication.common.Fruit
 import com.app.myapplication.common.FruitAdapter
 import com.app.myapplication.common.MyDatabaseHelper
 import kotlinx.android.synthetic.main.activity_menu.*
-import kotlinx.android.synthetic.main.fruit_item.view.*
 import java.io.*
-import java.lang.Exception
 
 class MenuActivity : BaseActivity(), View.OnClickListener {
     lateinit var toastbroadcastReceiver: ToastBroadcastReceiver
@@ -41,8 +34,12 @@ class MenuActivity : BaseActivity(), View.OnClickListener {
                     setTitle("提示")
                     setMessage("点击删除")
 //                    setCancelable(false)
-                    setPositiveButton("ok"){dialog,witch ->  }
-                    setNegativeButton("cancel"){dialog,witch ->  }
+                    setPositiveButton("ok"){
+                            dialog ,witch ->
+                    }
+                    setNegativeButton("cancel"){dialog,witch ->
+
+                    }
                 }.show()
             }
             R.id.createDatabase -> {
@@ -79,6 +76,14 @@ class MenuActivity : BaseActivity(), View.OnClickListener {
                 val intent = Intent(this, ContactActivity::class.java)
                 startActivity(intent)
             }
+            R.id.materialDesign -> {
+                /**
+                UI:MaterialDesign
+                 */
+                val intent = Intent(this, MaterialDesignActivity::class.java)
+                startActivity(intent)
+            }
+
            /* R.id.forceoffline -> {
                 *//**
                  * 静态广播
@@ -195,7 +200,7 @@ class MenuActivity : BaseActivity(), View.OnClickListener {
     }
     override fun onDestroy() {
         super.onDestroy()
-       // unregisterReceiver(toastbroadcastReceiver)
+        unregisterReceiver(toastbroadcastReceiver)
 
         val inputText = saveData.text.toString()            //在返回活动时将控件saveData里的内容存储在名为data的文件中
         save(inputText)

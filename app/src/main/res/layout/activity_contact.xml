@@ -7,6 +7,102 @@
     <ListView
         android:id="@+id/contactView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="200dp">
     </ListView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+    <Button
+        android:id="@+id/handlerUI"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="使用handler处理更新UI"
+        android:onClick="onClick"
+        android:textAllCaps="false"/>
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="20dp"
+        android:text="改变前的文字" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <Button
+            android:id="@+id/startServicebtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="开启前台服务"
+            android:onClick="onClick"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/stopServicebtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="结束前台服务"
+            android:onClick="onClick"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/startIntentServicebtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开启IntentService服务"
+        android:onClick="onClick"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/sendRequestBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="网络请求OKHttp"
+        android:onClick="onClick"/>
+    <Button
+        android:id="@+id/httpUtilBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="使用httpUtil"
+        android:onClick="onClick"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/responseText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </ScrollView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="使用GSON对JSON进行解析"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/responseGson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </ScrollView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="使用httpUtils"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/responseHttpUtil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </ScrollView>
 </LinearLayout>

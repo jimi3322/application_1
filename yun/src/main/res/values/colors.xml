@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="workStateON">#023894</color>
+
+    <color name="red">#ff0000</color>
+    <color name="red_tip">#D81E06</color>
+    <color name="task_list_filter_reset_bg">#a0a0a0</color>
+    <color name="task_list_filter_blue_color">#0662b5</color>
+
+    <color name="commonPageColor">#ededed</color>
+    <color name="commonTextColor">#181818</color>
+    <color name="commonTextGray">#999999</color>
+    <color name="white">#ffffff</color>
+    <color name="CommonTextHint">#7f7f7f</color>
+    <color name="CommonTitleBarRed">#ca2c32</color>
+    <color name="transparent">#00000000</color>
+    <color name="common_gray_text_color">#707070</color>
+    <color name="common_gray_line_color">#E4E4E4</color>
+    <color name="commonBlueColor">#0c419f</color>
+    <color name="dialog_title_color">#5a5959</color>
+    <color name="colorFilterGray">#858486</color>
+    <color name="search_bg_line_color">#a9a9a9</color>
+    <color name="filter_gray_3d">#3d3d3d</color>
+    <color name="filter_gray_b0">#b0b0b0</color>
+</resources>

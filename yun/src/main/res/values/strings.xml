@@ -1,0 +1,197 @@
+<resources>
+    <string name="app_name">文章列表/echart</string>
+
+    <string name="device_list_tip">发现附近可以连接的设备</string>
+    <string name="device_list_title">设备列表</string>
+    <string name="device_list_refresh_title">找不到设备？点击刷新重试</string>
+
+    <string name="home_bottom_one_title">首页</string>
+    <string name="home_bottom_two_title">状态</string>
+    <string name="home_bottom_three_title">数据</string>
+    <string name="home_type1">检漏主页</string>
+    <string name="home_type2">待机界面</string>
+    <string name="home_type3">抽空中</string>
+    <string name="home_type4">报警提示</string>
+    <string name="home_type5">真空校准</string>
+    <string name="home_type6">吸枪校准</string>
+    <string name="refresh">刷新</string>
+    <string name="awaiting">数据</string>
+
+    <string name="leak_state_page_title">检漏状态</string>
+    <string name="work_state_page_title">工作状态</string>
+    <!--输出界面-->
+    <string name="output_page_title">输出界面</string>
+    <string name="real_time_curve">实时数据</string>
+    <string name="output_page_text1">真空度继电器1</string>
+    <string name="output_page_text2">真空度继电器2</string>
+    <string name="output_page_text_model">模式：</string>
+    <string name="output_page_text_value">设定值：</string>
+    <string name="output_page_text3">串口2设定</string>
+    <string name="output_page_text4">波特率：</string>
+    <string name="output_page_text5">协议：</string>
+    <string name="output_page_text6">检漏模式：</string>
+    <string name="output_page_text7">标漏模式：</string>
+    <string name="output_page_text8">真空度继电器输出使能：</string>
+
+    <!--查看参数页面-->
+    <string name="param_page_title">各类参数</string>
+    <string name="param_page_text1">检漏精度：</string>
+    <string name="param_page_text2">外部控制使能：</string>
+    <string name="param_page_text3">分子泵转速：</string>
+    <string name="param_page_text4">真空模式因数：</string>
+    <string name="param_page_text5">吸枪模式因数：</string>
+    <string name="param_page_text6">继电器输出使能：</string>
+    <string name="param_page_text7">真空显示下限：</string>
+    <string name="param_page_text8">吸枪显示下限：</string>
+
+    <!--标定位置页面-->
+    <string name="position_page_title">标定状态</string>
+    <string name="position_page_text1">真空标漏漏率：</string>
+    <string name="position_page_text2">真空信号计数：</string>
+    <string name="position_page_text3">吸枪标漏漏率：</string>
+    <string name="position_page_text4">吸枪信号计数：</string>
+    <string name="position_page_text5">校零模式：</string>
+    <string name="position_page_text6">自动校零时间：</string>
+    <string name="position_page_text7">本底刷新时间：</string>
+    <string name="position_page_text8">校零量级：</string>
+    <string name="position_page_text9">滤波方式：</string>
+
+    <!--报警信息-->
+    <string name="alarm_info_page_title">报警信息</string>
+    <string name="alarm">报警</string>
+    <string name="alarm_info_page_text1">报警阈值1：</string>
+    <string name="alarm_info_page_text2">报警阈值2：</string>
+    <string name="alarm_info_page_text3">报警阈值3：</string>
+    <string name="alarm_info_page_text4">报警阈值4：</string>
+    <string name="alarm_info_page_text5">报警延迟时间：</string>
+    <string name="alarm_info_page_text6">报警继电器：</string>
+    <string name="alarm_info_page_text7">报警音量：</string>
+    <string name="alarm_info_page_text8">漏率单位：</string>
+    <string name="alarm_info_page_text9">真空单位：</string>
+
+    <!--电位电压页面-->
+    <string name="voltage_page_title">电位电压</string>
+    <string name="voltage_page_text1">灯丝采样电压：</string>
+    <string name="voltage_page_text2">电子流电压：</string>
+    <string name="voltage_page_text3">阳极电位：</string>
+    <string name="voltage_page_text4">阴极电位：</string>
+    <string name="voltage_page_text5">抑制栅电位：</string>
+    <string name="voltage_page_text6">检漏口电压：</string>
+    <string name="voltage_page_text7">排气口电压：</string>
+    <string name="voltage_page_text8">信号电压：</string>
+    <string name="voltage_page_text9">当前检漏号：</string>
+    <string name="voltage_page_text10">当前量程：</string>
+    <string name="voltage_page_text11">机箱温度：</string>
+
+
+    <!--检漏数据页面-->
+    <string name="leak_data_list_title">检漏数据</string>
+    <string name="leak_sort_text">序号： </string>
+    <string name="leak_product_num_text">产品编号： </string>
+    <string name="leak_text">漏率： </string>
+    <string name="threshold_text">报警阈值： </string>
+    <string name="unit_text">单位： </string>
+    <string name="result_text">测试结果： </string>
+    <string name="test_time_text">测试时间： </string>
+
+    <!--启动中-->
+    <string name="starting_state_title">启动中</string>
+    <string name="starting_start_time">启动用时：</string>
+    <string name="starting_leak_pre_text">检漏口压力：</string>
+    <string name="starting_v_pre_text">排气口压力：</string>
+    <string name="starting_thresh_text">报警阈值：</string>
+
+    <!--真空标定页面-->
+    <string name="zk_db_title">真空标定</string>
+    <string name="zk_db_time">时间：</string>
+    <string name="zk_db_model">模式：</string>
+    <string name="zk_db_model_value">真空模式</string>
+    <string name="zk_db_state">状态：</string>
+    <string name="zk_db_pre">检漏口压力：</string>
+    <string name="zk_db_last_bd_value">上次标定值：</string>
+    <string name="zk_db_signal_value">当前信号值：</string>
+
+
+    <!--吸枪标定页面-->
+    <string name="xq_db_title">吸枪标定</string>
+    <string name="xq_db_time">时间：</string>
+    <string name="xq_db_model">模式：</string>
+    <string name="xq_db_model_value">吸枪模式</string>
+    <string name="xq_db_state">信号：</string>
+    <string name="xq_db_pre">吸枪堵压力：</string>
+
+    <!--更新弹窗-->
+    <string name="confirm_update_app">发现新版本</string>
+    <string name="update_app_now">立即更新</string>
+    <string name="cancel_update_app"><font size="8">暂不更新</font></string>
+
+    <!--设置页面-->
+    <string name="setup_page_title">设置</string>
+    <string name="setup_page_resetpassword">修改密码</string>
+    <string name="setup_page_logout">退出登录</string>
+    <string name="setup_page_aboutus">关于我们</string>
+    <string name="wayeal">wayeal</string>
+    <string name="waywal1">安徽皖仪科技股份有限公司</string>
+    <!--修改密码界面-->
+    <string name="modify_password">修改密码</string>
+    <string name="old_password">旧密码</string>
+    <string name="new_password">新密码</string>
+    <string name="ensure_new_password">确认新密码</string>
+    <string name="old_password_input_error">旧密码输入错误</string>
+    <string name="same_old_password">新密码与旧密码相同请重新输入</string>
+    <string name="password_not_same">新密码两次输入不一致</string>
+    <string name="input_login_password"><font size="10">即登录密码</font></string>
+    <string name="modify_in_process">正在执行修改，请稍后</string>
+    <string name="modify_password_success">修改成功，下次登录生效</string>
+    <string name="modify_password_fail">密码修改失败</string>
+    <string name="system_config">系统设置</string>
+    <string name="usage_help">使用帮助</string>
+    <string name="load_help_file_error">帮助文档加载出错，可能已丢失</string>
+    <string name="log_out">退出登录</string>
+    <!--输入验证提示-->
+    <string name="valid_not_empty">不能为空</string>
+    <string name="valid_input_num">请输入数字</string>
+    <string name="valid_input_num_alpha_chinese_parenthesis_underline">请输入数字、字母、汉字、括号或下划线</string>
+    <string name="valid_input_english_double_quote">输入不能包含&#092;&#034;符号</string>
+    <string name="valid_input_num_parenthesis_dash">请输入数字、括号(英文)或中划线</string>
+    <string name="valid_input_num_alpha_underline">请输入数字、字母或下划线</string>
+    <string name="num_1_20"><font size="10">1-20个数字</font></string>
+    <string name="num_alpha_chinese_parenthesis_underline_1_10"><font size="10">1-10个数字、字母、汉字、括号或下划线</font></string>
+    <string name="num_parenthesis_dash_1_20"><font size="10">1-20个数字、括号(英文)或中划线</font></string>
+    <string name="num_alpha_chinese_symbol_0_150"><font size="10">0-150个数字、字母、汉字或除&#047;&#092;&#092;&#060;&#062;&#092;&#034;外的符号</font></string>
+    <string name="valid_not_ip">IP地址输入非法</string>
+    <string name="valid_not_port_number">端口号输入非法</string>
+    <string name="valid_port_number"><font size="10"> 请输入0-65535整数</font></string>
+    <string name="valid_ip_address"><font size="10"> 请输入合法的IP地址</font></string>
+    <string name="num_alpha_underline_1_10"><font size="10">1-10个数字、字母或下划线</font></string>
+    <string name="second_input_password_tip"><font size="10">再次输入新密码</font></string>
+
+
+    <!--登录页面-->
+    <string name="login_userid_password_error">用户名或密码错误</string>
+    <string name="operation_overtime_goto_login">系统操作超时，请重新登录</string>
+    <string name="login_tip_title">操作方式可选择</string>
+    <string name="login_tip_one">账号密码直接登录</string>
+    <string name="login_tip_two">选择“物联网模式”</string>
+    <string name="login_tip_two_desc">(手机连接到物联网内不能和外网进行通讯时，可选择该模式跳过登录)</string>
+    <string name="login_skip">物联网模式</string>
+
+
+    <!--连接方式选择页面-->
+    <string name="device_enter_title">设备直连</string>
+    <string name="device_enter_desc">手机直接和设备进行数据交互</string>
+    <string name="sys_enter_title">云控制</string>
+    <string name="sys_enter_desc">手机通过云服务和设备进行数据交互</string>
+
+    <string name="home_page_title">控制方式选择</string>
+
+    <!--彩云天气-->
+    <string name="temperature">温度：</string>
+    <string name="workStatus">实况：</string>
+    <string name="humidity">humidity：</string>
+    <string name="skycon">skycon：</string>
+
+    <!--demo-->
+    <string name="artical_list_null">请求数据为空</string>
+    <string name="artical_list_refresh">无数据显示，请再次刷新</string>
+</resources>

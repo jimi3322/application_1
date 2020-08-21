@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.app.yun.view.TitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <Button
+            android:id="@+id/startIntentServicebtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HTTP请求"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/sendRequestBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="设备连接"/>
+        <Button
+            android:id="@+id/sendRealtimeRequest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="实况天气"/>
+        <Button
+            android:id="@+id/articleRequest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="获取文章列表"/>
+    </LinearLayout>
+
+
+</LinearLayout>

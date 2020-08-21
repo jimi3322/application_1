@@ -72,7 +72,7 @@
              android:layout_height="wrap_content"/>-->
 
     <LinearLayout
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_height="wrap_content"
         android:layout_width="match_parent">
         <Button
@@ -88,10 +88,9 @@
             android:id="@+id/readContact"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="读取联系人信息"
+            android:text="读取联系人信息权限||异步更改UI||开启前台服务||开启Intent服务||网络请求 "
             android:onClick="onClick"
             android:textAllCaps="false"
-            android:minHeight="30dp"
             android:background="@drawable/buttonstyle"/>
     </LinearLayout>
 
@@ -100,5 +99,26 @@
         android:id="@+id/recyclerview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <Button
+            android:id="@+id/materialDesign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开启MaterialDesign"
+            android:onClick="onClick"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/echarts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="echarts图表"
+            android:onClick="onClick"
+            android:textAllCaps="false"
+            android:background="@drawable/buttonstyle"/>
+    </LinearLayout>
 
 </LinearLayout>
