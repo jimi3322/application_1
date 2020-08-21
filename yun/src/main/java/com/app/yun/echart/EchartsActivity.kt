@@ -24,9 +24,11 @@ import com.github.abel533.echarts.series.Pie
 import kotlinx.android.synthetic.main.activity_echarts.*
 import java.util.*
 
+
 class EchartsActivity : FragmentActivity(), EChartWebView.DataSource {
     val pages=0
     private  var showPieChartData : ArrayList<ShowPieChartDatas>? = null //可空
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_echarts)
@@ -39,6 +41,8 @@ class EchartsActivity : FragmentActivity(), EChartWebView.DataSource {
             val intent = Intent(this, DemoActivity::class.java)
             startActivity(intent)
         }
+
+
     }
 
     override fun markChartOptions(): GsonOption {
