@@ -4,7 +4,7 @@
     <!--<item
         android:id="@+id/home"
         android:title="菜单导航"
-        android:icon="@drawable/menu"
+        android:menu_information_press="@drawable/menu"
         app:showAsAction="always"/>-->
     <item
         android:id="@+id/backup"

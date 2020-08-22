@@ -3,6 +3,7 @@ package com.app.yun.datepick;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.app.yun.R;
+import com.app.yun.echart.EchartsActivity;
 
 import java.util.Calendar;
 
@@ -135,6 +137,11 @@ public class DatePickActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.datepicker:
                 showDatePickDialog();
+                break;
+            case R.id.echart:
+                Toast.makeText(this,"xx",Toast.LENGTH_LONG);
+                Intent intent = new Intent(DatePickActivity.this, EchartsActivity.class);
+                startActivity(intent);
                 break;
             default:
                 break;

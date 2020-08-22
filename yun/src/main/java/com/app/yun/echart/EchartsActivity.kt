@@ -26,7 +26,6 @@ import java.util.*
 
 
 class EchartsActivity : FragmentActivity(), EChartWebView.DataSource {
-    val pages=0
     private  var showPieChartData : ArrayList<ShowPieChartDatas>? = null //可空
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -47,7 +47,7 @@ dependencies {
     //echarts图表
     implementation 'com.github.frendyxzc:Charts:0.0.2'
     implementation "com.github.abel533:ECharts:2.2.7"
-    //时间选择
+    implementation 'com.google.android.material:material:1.2.0'
 }
 repositories {
     mavenCentral()
