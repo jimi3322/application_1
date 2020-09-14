@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomBtn"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_btn_height"
+    android:layout_alignParentBottom="true"
+    android:gravity="center"
+    android:textColor="@color/white"
+    android:textSize="20sp"
+    android:background="@drawable/common_ok_bg_selector"
+    android:layout_marginBottom="@dimen/common_page_padding"
+    android:text="@string/confirm">
+</TextView>

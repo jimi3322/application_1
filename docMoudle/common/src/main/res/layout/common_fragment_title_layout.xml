@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp">
+        <ImageView
+            android:id="@+id/backIg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/common_back_icon"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:padding="@dimen/common_page_padding"/>
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:text="标题栏"
+            android:maxLength="10"
+            android:textColor="@color/commonTextColor"
+            android:textSize="20dp"
+            android:layout_centerInParent="true"/>
+        <ImageView
+            android:id="@+id/rightBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/common_padding_with_bg"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+</LinearLayout>

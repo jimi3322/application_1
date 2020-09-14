@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/filter_select_hint"
+        android:textColor="@color/colorFilterGray"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_page_line"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/title"
+        android:layout_marginRight="@dimen/common_page_padding"
+        android:background="@color/colorFilterGray" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_page_line"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/title"
+        android:layout_marginLeft="@dimen/common_page_padding"
+        android:background="@color/colorFilterGray" />
+</RelativeLayout>

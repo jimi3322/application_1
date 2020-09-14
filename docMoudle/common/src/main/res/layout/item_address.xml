@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/addressTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/common_page_divider"
+        android:layout_marginLeft="@dimen/common_page_padding"
+        android:layout_marginTop="@dimen/common_page_divider"
+        android:textColor="@color/commonTextColor"
+        android:textSize="@dimen/common_tip_text_size" />
+    <ImageView
+        android:id="@+id/selectedIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+       android:src="@drawable/selected_icon"
+        android:layout_marginLeft="5dp"/>
+
+</LinearLayout>

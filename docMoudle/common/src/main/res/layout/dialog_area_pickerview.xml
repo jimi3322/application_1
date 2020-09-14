@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/common_page_padding"
+            android:text="请选择地址"
+            android:textColor="#000000"
+            android:textSize="@dimen/common_text_size"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:paddingRight="@dimen/common_page_padding"
+            android:src="@drawable/delete_selector" />
+
+    </LinearLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/address_tab_height"
+        android:background="@color/white"
+        app:tabIndicatorColor="@color/commonBlueColor"
+        app:tabIndicatorHeight="1dp"
+        app:tabMode="scrollable"
+        app:tabBackground="@color/transparent"
+        app:tabSelectedTextColor="@color/commonBlueColor"
+        app:tabTextColor="@color/commonTextColor" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/common_gray_line_color" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never" />
+
+</LinearLayout>

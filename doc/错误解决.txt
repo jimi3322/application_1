@@ -1,0 +1,6 @@
+1、lambda expressions are not supported at language level 7
+选中app，右键Open Module Settings，将Source Compatibility和Target Compatibility改为1.8（java8）
+2、在使用 ActionBar的时候，有时候会爆出空指针异常，这是因为应用没有获取到 ActionBar 导致的，
+原因检查你的应用是否设置了没有 ActionBar 的主题Theme，或者直接设置了 NoActionBar或NoTitleBar 属性，主要要检查这几点：检查 AndroidManifest.xml 中的 标签中的theme属性，然后检查各个 Activity 标签中是否有不同的 Theme 导致这个界面的 ActionBar 无法显示，@android:style/Theme.NoTitleBar和<item name="windowActionBar">false</item>
+<item name="android:windowNoTitle">true</item>这样的属性都会使应用中的 ActionBar消失，切记，如果你要使用ActionBar,则一定要清除掉这些Theme属性设置，如果你的项目中 res 目录下除了 values 目录外，还有其他的res/values-v11，style/values-v14等，则这些目录中的 styles.xml 都需要检查一下，最后再检查下 Activity 代码中是否动态设置了全屏或者不显示TitleBar,代码如下：
+ 解决：android:theme="@style/AppTheme"中含有NoActionBar的属性，所以getSupportActionBar().hide();会得不到ActionBar，这两处都是为了将系统的ActionBar隐藏起来

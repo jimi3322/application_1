@@ -1,0 +1,24 @@
+一、自定义布局
+场景：在实现大量重复的子按键或者子布局时，如果一个一个去复写工作量庞大，就需要创建自定义布局直接导入布局里，可以节省大量的时间
+1.编写一个自定义xml布局
+2.将这个自定义xml布局实例化成Java布局类（继承布局类实现），在布局类中直接添加功能
+3.将这个类写入父类的xml布局文件里
+二、ViewPager搭配Fragment去
+场景：实现标签页是一种非常常见的做法
+一个页面切换的组件，我们可以往里面填充多个View，然后我们可以通过触摸屏幕左右滑动 切换不同的View，和前面学习的ListView一样，我们需要一个Adapter(适配器)，
+将要显示的View和 我们的ViewPager进行绑定，而ViewPager有他自己特定的Adapter——PagerAdapter！另外，Google 官方是建议我们使用Fragment来填充ViewPager的,
+这样可以更加方便的生成每个Page以及管理 每个Page的生命周期!当然它给我们提供了两个不同的Adapter，他们分别是： FragmentPageAdapter和FragmentStatePagerAdapter！
+ViewPager是v4包中的一个类，继承自ViewGroup，是一个容器。ViewPager经常用来连接Fragment，它能够方便的管理每个页面的生命周期，ViewPager通过
+适配器管理Fragment，常用的适配器有FragmentPagerAdapter和FragmentStatePagerAdapter。
+三、DialogFragment
+Android 官方推荐使用 DialogFragment 来代替 Dialog ，可以让它具有更高的可复用性（降低耦合）和更好的便利性（很好的处理屏幕翻转的情况）
+四、将Activity转化为Fragment
+目的：为了使Activity的局部可以动态替换
+步骤：1) 将Activity的onCreate()方法中的代码全部移到Fragment的onCreateView()中
+        2) 将setContentView(R.layout.activity_main);修改为： View view= inflater.inflate(R.layout.fragment_tabs_pager, null);
+        3) 所有的 findViewById(android.R.id.tabhost);修改为： view.findViewById(android.R.id.tabhost);      
+        4) onCreateView()里的Context this修改为：Context getActivity()
+        5)点击事件 llDate.setOnClickListener(this);修改为 llDate.setOnClickListener(this::onClick);
+        6)其他On...Listener之类的监听事件里的this，首先按alt+enter使Fragment继承Fragment implements DatePicker.OnDateChangedListener，然后重写 
+            @Override public void onDateChanged(DatePicker datePicker, int i, int i1, int i2) { }这个方法，这样就可以正常使用this
+        6)activity和fragment的xml布局文件可以直接拷贝使用

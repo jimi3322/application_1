@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="airBlue">#4CA8FF</color>
+    <color name="blackText">#2A2C1F</color>
+    <color name="selectedText">#4CA8FF</color>
+    <color name="unSelectedText">#343434</color>
+</resources>

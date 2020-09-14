@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.wayeal.newair">
+
+    <application
+        android:name=".common.AirApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar"
+        tools:ignore="ExtraText">
+        <activity android:name=".statistic.QualityConditionActivity"></activity>
+        <activity android:name=".statistic.ComparativeAnalysisActivity" />
+        <activity android:name=".statistic.AirQualityRankingActivity" />
+        <activity android:name=".statistic.AirQualityCalenderActivity" />
+        <activity android:name=".monitor.GisMapActivity" />
+        <activity android:name=".monitor.RealTimeDataActivity" />
+        <activity android:name=".monitor.RealTimeListActivity" />
+        <activity android:name=".data.HistoricalDataActivity" />
+        <activity android:name=".data.DayDataActivity" />
+        <activity android:name=".data.AQICurveActivity" />
+        <activity android:name=".setting.AQIExplainActivity" />
+        <activity
+            android:name=".data.HistoricalDataCurveActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".base.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="pZDzVLqT5gTV1slkMGmLOACPeOKrCsCb" />
+    </application>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+</manifest>

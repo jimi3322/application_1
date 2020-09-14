@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:paddingLeft="@dimen/common_page_padding"
+    android:paddingRight="@dimen/common_page_padding">
+    <ImageView
+        android:id="@+id/imgAppIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/common_login_logo"/>
+
+    <com.app.common.view.ClearEditText
+        android:id="@+id/txtUserID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="89dp"
+        android:allowUndo="false"
+        android:ems="10"
+        android:hint="@string/user_id"
+        android:inputType="textPersonName"
+        android:textSize="@dimen/common_login_input_size"
+        android:textColor="@color/commonTextColor"
+        android:textColorHint="@color/CommonTextHint"
+        android:textColorLink="@android:color/transparent" />
+
+    <com.app.common.view.ClearEditText
+        android:id="@+id/txtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="@string/user_password"
+        android:textSize="@dimen/common_login_input_size"
+        android:inputType="textPassword"
+        android:textColor="@color/commonTextColor"
+        android:textColorHint="@color/CommonTextHint"
+        android:textColorLink="@android:color/transparent" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+        <CheckBox
+            android:id="@+id/chkRememberPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginLeft="3dp"
+            android:button="@null"
+            android:drawablePadding="@dimen/common_login_checkbox_padding"
+            android:drawableLeft="@drawable/common_login_checkbox_selector"
+            android:textSize="13sp"
+            android:textColor="@color/CommonTextHint"
+            android:text="@string/remember_password" />
+        <CheckBox
+            android:id="@+id/chkAutoLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:button="@null"
+            android:drawablePadding="@dimen/common_login_checkbox_padding"
+            android:drawableLeft="@drawable/common_login_checkbox_selector"
+            android:textSize="13sp"
+            android:textColor="@color/CommonTextHint"
+            android:text="@string/auto_login" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:layout_marginTop="24dp"
+        android:textSize="17sp"
+        android:background="@drawable/radiobutton_background_checked"
+        android:onClick="onClick"
+        android:text="@string/login"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal|bottom"
+        android:layout_marginBottom="37dp"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/txtAppVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_version"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:textColor="@color/CommonTextHint" />
+
+        <TextView
+            android:id="@+id/txtCopyright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_copyright"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/CommonTextHint" />
+    </LinearLayout>
+
+
+</LinearLayout>

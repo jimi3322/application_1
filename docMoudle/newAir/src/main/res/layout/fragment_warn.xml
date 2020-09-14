@@ -1,0 +1,223 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wayeal.newair.warn.WarnFragment"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    >
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/common_blue_tablayout"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="12dp"
+        >
+
+        <TextView
+            android:layout_width="80dp"
+            android:gravity="right"
+            android:layout_height="wrap_content"
+            android:text="开始时间："
+            android:textSize="14sp"
+            android:textColor="@color/blackText"
+            android:layout_gravity="center_vertical"
+            android:textStyle="bold"
+            />
+
+        <com.wayeal.newair.common.view.ChooseView
+            android:id="@+id/startTime"
+            android:layout_width="208dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="23dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="12dp"
+        >
+
+        <TextView
+            android:layout_width="80dp"
+            android:gravity="right"
+            android:layout_height="wrap_content"
+            android:text="结束时间："
+            android:textSize="14sp"
+            android:textColor="@color/blackText"
+            android:layout_gravity="center_vertical"
+            android:textStyle="bold"
+            />
+
+        <com.wayeal.newair.common.view.ChooseView
+            android:id="@+id/endTime"
+            android:layout_width="208dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="23dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="12dp"
+        >
+
+        <TextView
+            android:layout_width="80dp"
+            android:gravity="right"
+            android:layout_height="wrap_content"
+            android:text="报警类型："
+            android:textSize="14sp"
+            android:textColor="@color/blackText"
+            android:layout_gravity="center_vertical"
+            android:textStyle="bold"
+            />
+
+        <com.wayeal.newair.common.view.ChooseView
+            android:id="@+id/alarmType"
+            android:layout_width="208dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="23dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="12dp"
+        >
+
+        <TextView
+            android:layout_width="80dp"
+            android:gravity="right"
+            android:layout_height="wrap_content"
+            android:text="状&#8195;&#8195;态："
+            android:textSize="14sp"
+            android:textColor="@color/blackText"
+            android:layout_gravity="center_vertical"
+            android:textStyle="bold"
+            />
+
+        <com.wayeal.newair.common.view.ChooseView
+            android:id="@+id/state"
+            android:layout_width="208dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="23dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="12dp"
+        >
+
+        <TextView
+            android:layout_width="80dp"
+            android:gravity="right"
+            android:layout_height="wrap_content"
+            android:text="监测站点："
+            android:textSize="14sp"
+            android:textColor="@color/blackText"
+            android:layout_gravity="center_vertical"
+            android:textStyle="bold"
+            />
+
+        <com.wayeal.newair.common.view.ChooseView
+            android:id="@+id/station"
+            android:layout_width="208dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="23dp"
+            />
+
+        <Button
+            android:id="@+id/getWarnData"
+            android:text="@string/query"
+            android:layout_width="44dp"
+            android:layout_height="21dp"
+            android:background="@mipmap/bt_search_bg"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EEEEEE"
+        android:layout_marginTop="25dp"
+        >
+
+        <TextView
+            android:text="监测站点"
+            style="@style/real_time_common_title_text"
+            />
+        <TextView
+            style="@style/real_time_common_title_text"
+            android:text="报警时间"
+            />
+        <TextView
+            style="@style/real_time_common_title_text"
+            android:text="报警类型"
+            />
+        <TextView
+            style="@style/real_time_common_title_text"
+            android:text="操作"
+            />
+
+    </LinearLayout>
+
+    <com.wayeal.newair.common.view.LoadingLayout
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp">
+            </android.support.v7.widget.RecyclerView>
+
+            <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    </com.wayeal.newair.common.view.LoadingLayout>
+
+</LinearLayout>

@@ -1,0 +1,33 @@
+实现一个recyclerView
+
+数据来源说明：https://www.wanandroid.com/blog/show/2        1、1首页文章列表 ，
+参考请求url：https://www.wanandroid.com/article/list/0/json，其中0是分页的页码
+
+要求：	1、正常获取到数据并展示出来，item要展示文字名和作者
+	2、2种形式展示，竖向列表展示和网格展示，网格展示每行3个
+	3、item直接要有间隙，上下左右距离为10dp
+	4、要有加载的loading框，加载到数据loading框消失
+	5、加载不到数据或者数据异常时显示异常界面
+
+其他要求：1、显示异常界面时，点击可以重新加载
+	2、下拉刷新、上拉加载更多、分页加载的实现，可以参考GitHub开源库：https://github.com/scwang90/SmartRefreshLayout来实现
+
+
+
+修改：
+1、initView()
+最好只加载一次，所有一过性布局（adapter、refreshLayout、）都放在这里进行初始化，
+2、数据处理
+***问题1：分页，不要将页数变化放在刷新加载的时候，这样刷新失败的时候页数也会增加
+***问题2：分页，数据加载更多的时候，使用.addAll进行数据的追加
+3、recycelview布局
+不要在xml里面通过上下左右margin的方式来增加控件的间隙，会出现双倍间隙的问题
+通过articleListView.addItemDecoration()的自有方法可以实现很多布局
+4、recycelview加载更多不会自动跳转到首页，检查代码
+5、refreshlayout.finishRefresh(2000)是延时2s的刷新时间，实际应该在数据处理之时刷新结束
+
+总结：
+1、翻页实现获取内容的追加
+articleListDatas?.addAll(reaponseData)，此时的articleListDatas应该不为空，可先将第0页获取的数据放入
+再获取>0页的内容进行追加
+2、间隔问题

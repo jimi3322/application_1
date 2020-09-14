@@ -1,0 +1,101 @@
+<resources>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--监控-->
+    <string name="real_time_view">实时一览</string>
+    <string name="real_time_view_des">查看监测站点实时信息</string>
+    <string name="real_time_data">实时数据</string>
+    <string name="real_time_data_des">查看监测项目实时浓度值</string>
+    <string name="gis_map">GIS地图</string>
+    <string name="gis_map_des">查看监测站点AQI指数地图</string>
+    <string name="AQI">AQI指数</string>
+    <string name="please_select_province">请选择省份/直辖市: </string>
+    <string name="please_select_city">请选择城市: </string>
+    <string name="please_select_county">请选择区/县: </string>
+    <string name="please_select_station">请选择站点: </string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确认</string>
+    <string name="tip">提示</string>
+    <string name="session_state">会话状态</string>
+    <string name="session_state_title">会话状态:</string>
+    <string name="system_state">系统状态</string>
+    <string name="system_state_title">系统状态:</string>
+    <string name="station">监测站点</string>
+    <string name="station_simple">站点</string>
+    <string name="refresh_time_title">刷新时间:</string>
+    <string name="current_time_title">当前时间:</string>
+    <string name="station_title">监测站点:</string>
+    <string name="get_stations_fail">获取站点信息失败</string>
+    <string name="get_stations_success">获取站点信息成功</string>
+    <string name="empty">---</string>
+    <string name="online">在线</string>
+    <string name="upline">上线</string>
+    <string name="offline">离线</string>
+    <string name="all">全部</string>
+    <string name="monitor_time">监测时间</string>
+    <string name="monitor_detail">监测项</string>
+    <string name="monitor_value">监测值</string>
+    <string name="unit">单位</string>
+    <string name="second_standard">二类区标准</string>
+    <string name="filter">筛选</string>
+    <string name="pollution_type">污染物项目：</string>
+    <string name="aqi_tips">空气质量指数（AQI）数值，中国大陆站点均为中国标准，中国大陆之外站点为本地或美国标准</string>
+    <string name="legnd">图例</string>
+    <string name="no_data">无数据</string>
+    <string name="query">查询</string>
+    <string name="main_pollution">首要污染物</string>
+    <string name="operation">操作</string>
+    <string name="station_info_not_get">站点信息还没有获取到,稍后再试</string>
+
+
+    <!--数据-->
+    <string name="history_data">历史数据</string>
+    <string name="history_data_des">查看监测站点的历史小时数据</string>
+    <string name="day_data">日数据</string>
+    <string name="day_data_des">查看监测站点的日平均数据</string>
+    <string name="history_data_cruve">历史数据曲线</string>
+    <string name="history_data_cruve_des">查看监测站点的小时数据曲线</string>
+    <string name="aqi_curve">AQI曲线</string>
+    <string name="aqi_curve_des">查看监测站点的AQI曲线</string>
+    <string name="please_select_monitorItems">请选择监测项</string>
+    <string name="get_monitorItems_success">获取监测信息成功</string>
+    <string name="get_monitorItems_fail">获取监测信息失败</string>
+    <string name="get_stations_loading">正在加载站点...</string>
+    <string name="get_historical_fail">获取历史数据失败</string>
+    <string name="get_historical_null">获取历史数据为空</string>
+    <string name="get_AQI_fail">获取AQI数据失败</string>
+    <string name="get_AQI_null">获取AQI数据为空</string>
+    <string name="start_time">开始时间: </string>
+    <string name="end_time">结束时间: </string>
+
+    <!--统计-->
+    <string name="air_quality_calender">空气质量日历</string>
+    <string name="air_quality_calender_des">查看空气质量历史情况</string>
+    <string name="air_quality_rank">空气质量排行</string>
+    <string name="air_quality_rank_des">查看空气质量排名情况</string>
+    <string name="compair_analysis">对比分析</string>
+    <string name="compair_analysis_des">对比站点的空气质量</string>
+    <string name="quality_condition">质量状况</string>
+    <string name="quality_condition_des">质量状况统计及同期对比情况</string>
+    <string name="real_time_ranking">实时排行</string>
+    <string name="day_ranking">日排行</string>
+    <string name="ranking_type">排行类型</string>
+    <string name="single_trend_analysis">单站点趋势分析</string>
+    <string name="mutli_trend_analysis">综合趋势分析</string>
+    <string name="time">时间</string>
+    <string name="quality_statistic">质量状况统计</string>
+    <string name="quality_compare">质量同期对比</string>
+
+    <!--报警-->
+    <string name="alarm_type">报警类型</string>
+    <string name="state">状态</string>
+    <string name="warning_handle">报警处理</string>
+    <string name="warning_detail">报警信息详情</string>
+    <string name="warning_handle_person">处理人：</string>
+    <string name="handle_result">处理结果</string>
+
+    <!--设置-->
+    <string name="setting_AQI">AQI说明</string>
+
+</resources>

@@ -1,0 +1,11 @@
+1、kotlin可变参数解析
+option.series(Line().smooth(true).data(leng,*DataArrayY))
+public T data(Object... values) {
+        if (values == null || values.length == 0) {
+            return (T) this;
+        }
+        for (Object value : values) {
+            this.data().add(value);
+        }
+        return (T) this;
+    }

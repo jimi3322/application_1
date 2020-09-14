@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="SessionStates">
+        <item>全部</item>
+        <item>在线</item>
+        <item>上线</item>
+        <item>离线</item>
+    </string-array>
+
+    <string-array name="SystemStates">
+        <item>全部</item>
+        <item>正常</item>
+        <item>超上限</item>
+        <item>仪器故障</item>
+        <item>仪器通信故障</item>
+        <item>仪器离线</item>
+        <item>维护调试数据</item>
+        <item>缺试剂</item>
+        <item>缺纯水</item>
+        <item>缺水样</item>
+        <item>缺标样</item>
+        <item>加标回收</item>
+        <item>平行样测试</item>
+    </string-array>
+
+    <string-array name="MonitorItems">
+        <item>全部</item>
+        <item>PM2.5</item>
+        <item>SO2</item>
+        <item>O3</item>
+        <item>PM10</item>
+        <item>CO</item>
+        <item>NO2</item>
+    </string-array>
+
+    <string-array name="WarningTypes">
+        <item>所有</item>
+        <item>超限数据报警</item>
+        <item>异常数据报警</item>
+        <item>离线报警</item>
+    </string-array>
+
+    <string-array name="StateItems">
+        <item>所有</item>
+        <item>未处理</item>
+        <item>已处理</item>
+    </string-array>
+
+    <string-array name="RankingType">
+        <item>实时排行</item>
+        <item>日排行</item>
+    </string-array>
+
+    <string-array name="TimeHours">
+        <item>00:00</item>
+        <item>01:00</item>
+        <item>02:00</item>
+        <item>03:00</item>
+        <item>04:00</item>
+        <item>05:00</item>
+        <item>06:00</item>
+        <item>07:00</item>
+        <item>08:00</item>
+        <item>09:00</item>
+        <item>10:00</item>
+        <item>11:00</item>
+        <item>12:00</item>
+        <item>13:00</item>
+        <item>14:00</item>
+        <item>15:00</item>
+        <item>16:00</item>
+        <item>17:00</item>
+        <item>18:00</item>
+        <item>19:00</item>
+        <item>20:00</item>
+        <item>21:00</item>
+        <item>22:00</item>
+        <item>23:00</item>
+    </string-array>
+
+    <string-array name="Colors">
+        <item>#5793f3</item>
+        <item>#d14a61</item>
+        <item>#675bba</item>
+        <item>#c04aab</item>
+    </string-array>
+
+    <string-array name="HandleResults">
+        <item>报告领导</item>
+        <item>通知执法人员</item>
+        <item>通知运维人员</item>
+        <item>通知监测站点</item>
+        <item>自行处置</item>
+        <item>其他</item>
+    </string-array>
+</resources>

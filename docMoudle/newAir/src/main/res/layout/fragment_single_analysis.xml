@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".statistic.SingleAnalysisFragment">
+
+    <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="12dp"
+        android:layout_marginRight="15dp"
+    >
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="wrap_content"
+        android:text="开始时间："
+        android:textSize="14sp"
+        android:textColor="@color/blackText"
+        android:layout_gravity="center_vertical"
+        />
+
+    <com.wayeal.newair.common.view.ChooseView
+        android:id="@+id/startDate"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="24dp"
+        />
+
+    <com.wayeal.newair.common.view.ChooseView
+        android:id="@+id/startHour"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="24dp"
+        android:layout_marginLeft="23dp"
+        />
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="12dp"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="结束时间："
+            android:textSize="14sp"
+            android:textColor="@color/blackText"
+            android:layout_gravity="center_vertical"
+            />
+
+        <com.wayeal.newair.common.view.ChooseView
+            android:id="@+id/endDate"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="24dp"
+            />
+
+        <com.wayeal.newair.common.view.ChooseView
+            android:id="@+id/endHour"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="24dp"
+            android:layout_marginLeft="23dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="15dp"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="监测站点："
+            android:textSize="14sp"
+            android:textColor="@color/blackText"
+            android:layout_gravity="center_vertical"
+            />
+
+        <com.wayeal.newair.common.view.ChooseView
+            android:id="@+id/station"
+            android:layout_width="208dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="23dp"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="12dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="监测项目："
+            android:textSize="14sp"
+            android:textColor="@color/blackText"
+            android:layout_gravity="center_vertical"
+            />
+
+        <com.wayeal.newair.common.view.ChooseView
+            android:id="@+id/singleFactor"
+            android:layout_width="208dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="23dp"
+            />
+
+        <Button
+            android:id="@+id/getSingleAnalysis"
+            android:text="@string/query"
+            android:layout_width="44dp"
+            android:layout_height="21dp"
+            android:background="@mipmap/bt_search_bg"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <com.wayeal.newair.statistic.base.EChartView
+            android:id="@+id/chartView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.wayeal.newair.statistic.base.EChartView>
+
+    </LinearLayout>
+
+</LinearLayout>

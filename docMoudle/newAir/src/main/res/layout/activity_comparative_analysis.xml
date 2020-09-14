@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".statistic.ComparativeAnalysisActivity"
+    android:fitsSystemWindows="true"
+    >
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/common_blue_tablayout"/>
+
+    <RadioGroup
+        android:id="@+id/rgAnalysis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbSingle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/radio_button_bg"
+            android:button="@null"
+            android:checked="true"
+            android:paddingTop="19dp"
+            android:paddingBottom="19.5dp"
+            android:text="@string/single_trend_analysis"
+            android:textColor="@color/selectedText"
+            android:textStyle="bold"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/rbMutli"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:background="@drawable/radio_button_bg"
+            android:button="@null"
+            android:text="@string/mutli_trend_analysis"
+            android:textColor="@color/unSelectedText"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            />
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/analysisContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

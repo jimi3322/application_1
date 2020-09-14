@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    >
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="600dp"
+        android:layout_centerInParent="true"
+        >
+
+        <LinearLayout
+            android:id="@+id/center_bg"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:background="@drawable/shape_title_item_bg"
+            >
+
+            <TextView
+                android:id="@+id/title"
+                android:text="@string/tip"
+                android:layout_gravity="center_horizontal"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/shadow_shape"
+                android:layout_margin="30dp"
+                android:elevation="5dp">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/dataList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical"
+                    />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <Button
+                    android:id="@+id/cancelmuli"
+                    android:text="@string/cancel"
+                    android:layout_width="44dp"
+                    android:layout_height="21dp"
+                    android:background="@mipmap/bt_search_bg"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:layout_toLeftOf="@+id/center"/>
+
+                <View
+                    android:id="@+id/center"
+                    android:layout_width="50dp"
+                    android:layout_height="21dp"
+                    android:layout_centerInParent="true"/>
+
+                <Button
+                    android:id="@+id/confirmuli"
+                    android:layout_width="44dp"
+                    android:layout_height="21dp"
+                    android:background="@mipmap/bt_search_bg"
+                    android:text="@string/confirm"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:layout_toRightOf="@+id/center"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

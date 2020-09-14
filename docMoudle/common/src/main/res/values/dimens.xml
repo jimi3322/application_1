@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="common_page_padding">18dp</dimen>
+    <dimen name="common_page_divider">10dp</dimen>
+
+    <!--登录页面-->
+    <dimen name="common_login_input_size">15sp</dimen>
+    <dimen name="common_login_drawable_padding">11dp</dimen>
+    <dimen name="common_login_checkbox_padding">7dp</dimen>
+    <dimen name="common_text_size">15sp</dimen>
+    <dimen name="common_tip_text_size">13sp</dimen>
+    <dimen name="common_padding_with_bg">12dp</dimen>
+    <dimen name="common_bg_with_page">8dp</dimen>
+    <dimen name="common_text_dis">5dp</dimen>
+    <dimen name="common_page_line">0.5dp</dimen>
+    <dimen name="address_tab_height">25dp</dimen>
+    <dimen name="common_btn_height">45dp</dimen>
+    <dimen name="map_pop_offset">30dp</dimen>
+    <dimen name="x20">20dp</dimen>
+    <dimen name="y20">20dp</dimen>
+    <dimen name="y30">30dp</dimen>
+    <dimen name="y60">60dp</dimen>
+    <dimen name="x40">40dp</dimen>
+</resources>

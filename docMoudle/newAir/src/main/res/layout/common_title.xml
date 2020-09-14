@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/shape_title_item_bg"
+    >
+
+    <ImageView
+        android:id="@+id/title_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/realtime_list"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
+        />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_icon"
+        android:layout_gravity="center_horizontal"
+        android:text="实时一览"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:layout_marginTop="4dp"
+        />
+
+    <TextView
+        android:id="@+id/title_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_gravity="center_horizontal"
+        android:text="查看监测点实时信息"
+        android:textSize="13sp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="40dp"
+        />
+
+
+</LinearLayout>
