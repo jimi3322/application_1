@@ -29,7 +29,7 @@ class AirUtils {
          * map转成json
          */
         fun mapTojson(params: HashMap<String, Any>): String {
-            val jsonObj = JSONObject(params)
+            val jsonObj = JSONObject(params as Map<*, *>)
             return jsonObj.toString()
         }
 
