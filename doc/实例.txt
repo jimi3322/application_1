@@ -22,3 +22,14 @@ Android 官方推荐使用 DialogFragment 来代替 Dialog ，可以让它具有
         6)其他On...Listener之类的监听事件里的this，首先按alt+enter使Fragment继承Fragment implements DatePicker.OnDateChangedListener，然后重写 
             @Override public void onDateChanged(DatePicker datePicker, int i, int i1, int i2) { }这个方法，这样就可以正常使用this
         6)activity和fragment的xml布局文件可以直接拷贝使用
+五、两个Activity之间关联
+在一个Activity：BaseBusinessActivity里定义抽象方法
+abstract fun loadEcharts()
+并在相应的地方实现
+loadEcharts()
+然后在另一个Activity：AQICurveActivity中重写该方法，并执行相应的操作
+//等待站点数据加载完成再绘制图表
+    override fun loadEcharts() {
+        loading.showContent()
+        loadEchartLayout()
+    }
