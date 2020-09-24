@@ -11,4 +11,10 @@
         android:layout_centerInParent="true"
         android:text="第二页"
         android:textColor="#000"/>
+
+    <Button
+        android:id="@+id/openEcharts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="打开Echarts图表"/>
 </RelativeLayout>

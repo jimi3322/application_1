@@ -44,6 +44,7 @@ class EchartsActivity : FragmentActivity(), EChartWebView.DataSource {
 
     }
 
+    //配置option
     override fun markChartOptions(): GsonOption {
         return getPieChartOptionsFromNet()
     }
@@ -117,7 +118,7 @@ class EchartsActivity : FragmentActivity(), EChartWebView.DataSource {
     }
 
 
-    //postNetwork
+    //OKHTTP请求饼图数据
     fun getPieList(){
         //http://192.168.210.49:9699/app/api/air/GetQualityStatistics
         //'condition=' + JSON.stringify(condition) + '&time=' + JSON.stringify(time) + '&type=air-samePeriod',
@@ -149,6 +150,7 @@ class EchartsActivity : FragmentActivity(), EChartWebView.DataSource {
                 }
             })
     }
+
     fun getPieChartOptionsFromNet():GsonOption{
         getPieList()
         val option = GsonOption()

@@ -67,4 +67,26 @@
     <style name="DatePicker" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorAccent">@color/task_list_filter_blue_color</item>
     </style>
+
+
+
+<!--    弹窗-->
+    <style name="DialogFullScreen" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
+    <style name="BottomDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/dialog_bottom_up</item>
+        <item name="android:windowExitAnimation">@anim/dialog_bottom_down</item>
+    </style>
+
+    <style name="TopDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/dialog_top_show</item>
+        <item name="android:windowExitAnimation">@anim/dialog_top_hide</item>
+    </style>
 </resources>

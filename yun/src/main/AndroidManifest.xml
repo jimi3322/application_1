@@ -15,7 +15,8 @@
 
         <activity
             android:name=".echart.EchartsActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait">
+        </activity>
         <activity android:name=".ui.RealTimeActivity" />
         <activity android:name=".ui.ChangePasswordActivity" />
         <activity android:name=".ui.DeviceListActivity" />

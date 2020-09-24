@@ -10,20 +10,21 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.app.yun.fragment.FristFragment;
 import com.app.yun.fragment.SecondFragment;
+import com.app.yun.fragment.ThirdFragment;
 import com.google.android.material.tabs.TabLayout;
 
 public class TabLayoutMainActivity extends AppCompatActivity {
 
     //未选中的Tab图片
     private int[] unSelectTabRes = new int[]{R.drawable.menu_home_normal
-            , R.drawable.menu_information_normal //, R.drawable.menu_game_normal, R.drawable.menu_personl_normal
+            , R.drawable.menu_information_normal , R.drawable.menu_home_normal, //R.drawable.menu_personl_normal
     };
     //选中的Tab图片
     private int[] selectTabRes = new int[]{R.drawable.menu_home_press
-           , R.drawable.menu_information_press //,R.drawable.menu_game_press, R.drawable.menu_personl_press
+           , R.drawable.menu_information_press ,R.drawable.menu_home_press, //R.drawable.menu_personl_press
     };
     //Tab标题
-    private String[] title = new String[]{"首页", "娱乐"};
+    private String[] title = new String[]{"首页", "跳转Activity","弹窗"};
     private ViewPager viewPager;
     private TabLayout tabLayout;
 
@@ -107,7 +108,7 @@ public class TabLayoutMainActivity extends AppCompatActivity {
             if (position == 1) {
                 return new SecondFragment();//娱乐
             } else if (position == 2) {
-                //return new ThirtlyFragment();//游戏
+                return new ThirdFragment();//游戏
             } else if (position == 3) {
                // return new FourthlyFragment();//我的
             }
