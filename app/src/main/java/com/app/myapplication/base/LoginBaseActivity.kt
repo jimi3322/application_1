@@ -1,11 +1,11 @@
-package com.app.myapplication.ui.activity
+package com.app.myapplication.base
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.app.myapplication.R
 import com.app.myapplication.common.ActivityCollector
 
-open class BaseActivity : AppCompatActivity() {
+open class LoginBaseActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

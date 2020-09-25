@@ -17,4 +17,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="打开Echarts图表"/>
+
+    <Button
+        android:id="@+id/openBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="打开Banner"/>
 </RelativeLayout>

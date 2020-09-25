@@ -2,15 +2,14 @@ package com.app.myapplication
 
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import com.app.myapplication.ui.activity.BaseActivity
+import com.app.myapplication.base.LoginBaseActivity
 import com.app.myapplication.ui.activity.MenuActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : BaseActivity() {
+class MainActivity : LoginBaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

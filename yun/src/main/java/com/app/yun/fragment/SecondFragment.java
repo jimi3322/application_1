@@ -10,6 +10,7 @@ import android.widget.Button;
 import androidx.fragment.app.Fragment;
 
 import com.app.yun.R;
+import com.app.yun.banner.BannerActivity;
 import com.app.yun.echart.EchartsActivity;
 
 public class SecondFragment extends Fragment {
@@ -22,11 +23,19 @@ public class SecondFragment extends Fragment {
 
     @Override
     public void onViewCreated(View view,Bundle savedInstanceState) {
-        Button button = getActivity().findViewById(R.id.openEcharts);
-        button.setOnClickListener(new View.OnClickListener() {
+        Button openEcharts = getActivity().findViewById(R.id.openEcharts);
+        Button openBanner = getActivity().findViewById(R.id.openBanner);
+        openEcharts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent= new Intent(getActivity(), EchartsActivity.class);
+                startActivity(intent);
+            }
+        });
+        openBanner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(getActivity(), BannerActivity.class);
                 startActivity(intent);
             }
         });

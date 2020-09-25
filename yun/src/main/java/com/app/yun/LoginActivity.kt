@@ -2,27 +2,21 @@ package com.app.yun
 
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.CheckBox
 import android.widget.Toast
+import com.app.myapplication.base.LoginBaseActivity
 import com.app.myapplication.common.LogUtil.d
 import com.app.myapplication.common.domain.Constant
 import com.app.myapplication.common.domain.LoginData
-import com.app.myapplication.common.showToast
 import com.app.myapplication.common.utils.CommonUtil
 import com.app.myapplication.common.utils.http.CookieHelper
 import com.app.myapplication.common.utils.http.GsonResponseHandler
 import com.app.myapplication.common.utils.http.HttpUtil
 import com.app.myapplication.common.utils.http.OkHttpUtils
-import com.app.myapplication.common.utils.ui.UIUtil
-import com.app.myapplication.ui.activity.BaseActivity
-import com.app.myapplication.ui.activity.MenuActivity
 import com.app.yun.ui.MActivity
 import kotlinx.android.synthetic.main.activity_login.*
 
-class LoginActivity : BaseActivity() {
+class LoginActivity : LoginBaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

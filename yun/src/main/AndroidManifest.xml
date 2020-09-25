@@ -12,17 +12,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity
             android:name=".echart.EchartsActivity"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity android:name=".ui.RealTimeActivity" />
         <activity android:name=".ui.ChangePasswordActivity" />
         <activity android:name=".ui.DeviceListActivity" />
-        <activity android:name=".ui.MActivity" />
+        <activity android:name=".ui.MActivity" >
+        </activity>
         <activity android:name=".LoginActivity" />
-        <activity android:name=".datepick.DatePickActivity">
+        <activity android:name=".datepick.DatePickActivity"></activity>
+        <activity android:name=".banner.BannerActivity">
+
         </activity>
         <activity android:name=".TabLayoutMainActivity">
             <intent-filter>

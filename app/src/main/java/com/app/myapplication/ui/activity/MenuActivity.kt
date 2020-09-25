@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.app.myapplication.R
+import com.app.myapplication.base.LoginBaseActivity
 import com.app.myapplication.common.ActivityCollector
 import com.app.myapplication.common.Fruit
 import com.app.myapplication.common.FruitAdapter
@@ -16,7 +17,7 @@ import com.app.myapplication.common.MyDatabaseHelper
 import kotlinx.android.synthetic.main.activity_menu.*
 import java.io.*
 
-class MenuActivity : BaseActivity(), View.OnClickListener {
+class MenuActivity : LoginBaseActivity(), View.OnClickListener {
     lateinit var toastbroadcastReceiver: ToastBroadcastReceiver
     override fun onClick(v: View?) {
         when(v?.id){
