@@ -1,6 +1,6 @@
 package com.app.yun.banner
 
-import android.content.Context
+import android.content.Intent
 import android.graphics.drawable.ShapeDrawable
 import android.graphics.drawable.shapes.OvalShape
 import android.util.Log
@@ -17,7 +17,6 @@ import kotlinx.android.synthetic.main.activity_banner.*
 
 
 class BannerActivity : BaseActivity() {
-    private val mContext: Context? = null
     private var weChatAuthorResults : ArrayList<WeChatAuthorResult> = ArrayList()
 
     var imageUrls = listOf(
@@ -37,6 +36,7 @@ class BannerActivity : BaseActivity() {
 
     override fun initView() {
         //val headerView = LayoutInflater.from(mContext).inflate(R.layout.layout_home_header, null)
+
         //bannerImage加载
         bannerImage()
         //刷新页面组件
@@ -48,6 +48,11 @@ class BannerActivity : BaseActivity() {
         weChatAuthorResults?.add(WeChatAuthorResult(4,"表",4))
         weChatAuthorResults?.add(WeChatAuthorResult(5,"@",5))
         gridViewPager()
+
+        //搜索框监听
+        tv_home_search.setOnClickListener {
+            startActivity(Intent(this, gotoSearchActivity::class.java))
+        }
     }
 
     override fun initToolbar() {}

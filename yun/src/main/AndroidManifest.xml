@@ -22,9 +22,9 @@
         </activity>
         <activity android:name=".LoginActivity" />
         <activity android:name=".datepick.DatePickActivity"></activity>
-        <activity android:name=".banner.BannerActivity">
+        <activity android:name=".banner.BannerActivity"/>
+        <activity android:name=".banner.gotoSearchActivity"/>
 
-        </activity>
         <activity android:name=".TabLayoutMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

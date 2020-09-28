@@ -16,9 +16,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="打开Banner"/>
-    <Button
+    <!--<Button
         android:id="@+id/openMVPFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="打开切换Fragment"/>
+        android:text="打开切换Fragment"/>-->
 </LinearLayout>

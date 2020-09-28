@@ -25,7 +25,7 @@ public class SecondFragment extends Fragment {
     public void onViewCreated(View view,Bundle savedInstanceState) {
         Button openEcharts = getActivity().findViewById(R.id.openEcharts);
         Button openBanner = getActivity().findViewById(R.id.openBanner);
-        Button openMVPFragment = getActivity().findViewById(R.id.openMVPFragment);
+//        Button openMVPFragment = getActivity().findViewById(R.id.openMVPFragment);
         openEcharts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,13 +40,13 @@ public class SecondFragment extends Fragment {
                 startActivity(intent);
             }
         });
-        openMVPFragment.setOnClickListener(new View.OnClickListener() {
+        /*openMVPFragment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent= new Intent(getActivity(), TabMvpEventbusFragment.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
         super.onViewCreated(view, savedInstanceState);
     }
