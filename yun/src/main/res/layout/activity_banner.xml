@@ -62,7 +62,7 @@
     <com.app.yun.gridviewpager.GridViewPager
         android:id="@+id/gvp_viewpager"
         android:layout_width="match_parent"
-        android:layout_height="220dp"
+        android:layout_height="110dp"
         android:background="@android:color/white"
         app:itemLayoutId="@layout/item_home_wechat_authors" />
 

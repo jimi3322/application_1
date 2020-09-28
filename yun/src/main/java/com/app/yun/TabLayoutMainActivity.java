@@ -35,6 +35,8 @@ public class TabLayoutMainActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private TabLayout tabLayout;
 
+
+    private FragmentManager fragmentManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,7 +66,9 @@ public class TabLayoutMainActivity extends AppCompatActivity {
         }
     }
 
-    private void initData() {}
+    private void initData() {
+    }
+
 
     private void initListener() {
         //TabLayout切换时导航栏图片处理
@@ -90,6 +94,7 @@ public class TabLayoutMainActivity extends AppCompatActivity {
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {}
+
         });
     }
 
@@ -98,14 +103,15 @@ public class TabLayoutMainActivity extends AppCompatActivity {
         public MyFragmentPagerAdapter(FragmentManager fm) {
             super(fm);
         }
+
         @Override
         public Fragment getItem(int position) {
             if (position == 1) {
-                return new SecondFragment();//娱乐
+                return new SecondFragment();
             } else if (position == 2) {
-                return new ThirdFragment();//游戏
+                return new ThirdFragment();
             } else if (position == 3) {
-                return new FourthFragment();//我的
+                return new FourthFragment();
             }
             return new FirstFragment();//首页
         }

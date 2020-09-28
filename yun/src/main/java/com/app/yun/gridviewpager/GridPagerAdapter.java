@@ -49,7 +49,7 @@ public abstract class GridPagerAdapter<T> extends PagerAdapter {
         int itemCount = getCount();
         int end;
         if (position == itemCount - 1) {
-            end = position * eachPageSize + dataList.size() % 10;
+            end = position * eachPageSize + dataList.size() % 4;
         } else {
             end = position * eachPageSize + eachPageSize;
         }

@@ -6,9 +6,7 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.RelativeLayout;
-
 import androidx.viewpager.widget.ViewPager;
-
 import com.app.yun.R;
 
 
@@ -41,8 +39,8 @@ public class GridViewPager extends RelativeLayout {
     private void readAttrs(Context context, AttributeSet attrs) {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.GridViewPager);
         itemLayoutId = typedArray.getResourceId(R.styleable.GridViewPager_itemLayoutId, 0);
-        columnSize = typedArray.getInt(R.styleable.GridViewPager_columnSize, 5);
-        rowSize = typedArray.getInt(R.styleable.GridViewPager_rowSize, 2);
+        columnSize = typedArray.getInt(R.styleable.GridViewPager_columnSize, 4);
+        rowSize = typedArray.getInt(R.styleable.GridViewPager_rowSize, 1);
         typedArray.recycle();
     }
 

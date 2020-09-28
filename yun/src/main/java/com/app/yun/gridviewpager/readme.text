@@ -1,0 +1,9 @@
+一、图标列表
+1、修改行列数
+GridViewPager（42，43）
+columnSize = typedArray.getInt(R.styleable.GridViewPager_columnSize, 4);
+rowSize = typedArray.getInt(R.styleable.GridViewPager_rowSize, 1);
+
+2、修改翻页每页的最大容量
+GridPagerAdapter（53）
+end = position * eachPageSize + dataList.size() % 4;

@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fff"
-    android:orientation="vertical">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="第二页"
-        android:textColor="#000"/>
+    android:orientation="horizontal">
 
     <Button
         android:id="@+id/openEcharts"
@@ -22,6 +15,10 @@
         android:id="@+id/openBanner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:text="打开Banner"/>
-</RelativeLayout>
+    <Button
+        android:id="@+id/openMVPFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="打开切换Fragment"/>
+</LinearLayout>

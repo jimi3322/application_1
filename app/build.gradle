@@ -14,6 +14,11 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME : project.getName()]
+            }
+        }
     }
     signingConfigs {
         config{
@@ -75,5 +80,30 @@ dependencies {
 
     //标题栏
     api 'com.gyf.immersionbar:immersionbar:3.0.0'
+
+    //eventBus
+    api 'org.greenrobot:eventbus:3.1.1'
+
+    //Aroutor
+    api 'com.alibaba:arouter-api:1.4.1'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
+
+    //RXJava
+    api 'io.reactivex.rxjava3:rxjava:3.0.0'
+    api 'io.reactivex.rxjava3:rxandroid:3.0.0'
+
+    api 'com.alibaba:fastjson:1.1.55.android'
+
+    //用户信息cookie持久化
+    api 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
+
+    //URL 构建的细节
+    api 'com.squareup.retrofit2:retrofit:2.4.0'//导入retrofit
+    api 'com.squareup.retrofit2:converter-gson:2.4.0'//转换器，请求结果转换成Model
+    api 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+
+    //通用适配器
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
 
 }

@@ -7,8 +7,6 @@ import com.app.yun.base.BaseFragment
 
 class FirstFragment : BaseFragment() {
 
-
-
     override fun getLayoutResId(): Int {
         return R.layout.fragment_frist
     }
