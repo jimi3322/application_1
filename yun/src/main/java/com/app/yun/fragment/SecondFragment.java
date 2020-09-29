@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 
 import com.app.yun.R;
 import com.app.yun.banner.BannerActivity;
+import com.app.yun.banner.SPSearchActivity;
 import com.app.yun.echart.EchartsActivity;
 
 public class SecondFragment extends Fragment {
@@ -25,7 +26,7 @@ public class SecondFragment extends Fragment {
     public void onViewCreated(View view,Bundle savedInstanceState) {
         Button openEcharts = getActivity().findViewById(R.id.openEcharts);
         Button openBanner = getActivity().findViewById(R.id.openBanner);
-//        Button openMVPFragment = getActivity().findViewById(R.id.openMVPFragment);
+        Button openSPSearch = getActivity().findViewById(R.id.openSPSearch);
         openEcharts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,13 +41,13 @@ public class SecondFragment extends Fragment {
                 startActivity(intent);
             }
         });
-        /*openMVPFragment.setOnClickListener(new View.OnClickListener() {
+        openSPSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(getActivity(), TabMvpEventbusFragment.class);
+                Intent intent= new Intent(getActivity(), SPSearchActivity.class);
                 startActivity(intent);
             }
-        });*/
+        });
 
         super.onViewCreated(view, savedInstanceState);
     }

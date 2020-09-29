@@ -93,7 +93,7 @@
                 </com.app.yun.banner.MyListView>
 
                 <ListView
-                    android:id="@+id/example"
+                    android:id="@+id/examplelistView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                 </ListView>

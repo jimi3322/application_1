@@ -16,9 +16,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="打开Banner"/>
-    <!--<Button
-        android:id="@+id/openMVPFragment"
+    <Button
+        android:id="@+id/openSPSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="打开切换Fragment"/>-->
+        android:text="SP历史记录"/>
 </LinearLayout>

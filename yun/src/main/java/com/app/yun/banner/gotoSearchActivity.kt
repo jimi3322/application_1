@@ -125,18 +125,23 @@ class gotoSearchActivity : BaseActivity() {
             intArrayOf(android.R.id.text1), CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER
         )
 
+        // 设置SimpleCursorAdapter适配器，展示数据库数据
+        listView?.setAdapter(adapter)
+        adapter.notifyDataSetChanged()
 
-        val str_arr = arrayOf("22", "33", "叮叮当当")
+        // 设置ArrayAdapter + ListView适配器,并通过setListViewHeightBasedOnChildren方法解决只展示一条数据的问题
+        /*val str_arr = arrayOf("22", "33", "叮叮当当")
         val adapter2 = ArrayAdapter(this@gotoSearchActivity, android.R.layout.simple_list_item_1, str_arr)
         example?.setAdapter(adapter2)
         setListViewHeightBasedOnChildren(example)
-        adapter2.notifyDataSetChanged()
+        adapter2.notifyDataSetChanged()*/
 
-        // 设置适配器
-        /*listView?.setAdapter(adapter)
-        adapter.notifyDataSetChanged()*/
     }
 
+    /**
+     *  解决Android中ListView列表只显示一项数据的问题
+     *  思路：获取每项item的高度，并相加，再加上分割线的高度，作为整个ListView的高度
+     */
     fun setListViewHeightBasedOnChildren(listView: ListView) {
         // 获取ListView对应的Adapter
         val listAdapter = listView.adapter ?: return   //这是自己ListView的适配器
@@ -157,8 +162,6 @@ class gotoSearchActivity : BaseActivity() {
         // params.height最后得到整个ListView完整显示需要的高度
         listView.layoutParams = params
     }
-
-
 
 
     /**
