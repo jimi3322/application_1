@@ -115,19 +115,20 @@ class gotoSearchActivity : BaseActivity() {
      * 模糊查询数据
      */
     private fun queryData(tempName: String) {
+        //1、原始数据库操作方法
         var cursor = helper.getReadableDatabase().rawQuery(
             "select id as _id,name from records where name like '%$tempName%' order by id desc ",
             null
         )
-        // 创建adapter适配器对象
+
+        // 创建SimpleCursorAdapter适配器对象
         var adapter = SimpleCursorAdapter(
             this, android.R.layout.simple_list_item_1, cursor, arrayOf("name"),
             intArrayOf(android.R.id.text1), CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER
         )
-
         // 设置SimpleCursorAdapter适配器，展示数据库数据
         listView?.setAdapter(adapter)
-        adapter.notifyDataSetChanged()
+        adapter?.notifyDataSetChanged()
 
         // 设置ArrayAdapter + ListView适配器,并通过setListViewHeightBasedOnChildren方法解决只展示一条数据的问题
         /*val str_arr = arrayOf("22", "33", "叮叮当当")

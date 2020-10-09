@@ -1,24 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#fff"
-    android:orientation="horizontal">
+    android:orientation="vertical">
 
-    <Button
-        android:id="@+id/openEcharts"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="打开Echarts图表"/>
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/openEcharts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Echarts图表"/>
 
-    <Button
-        android:id="@+id/openBanner"
-        android:layout_width="wrap_content"
+        <com.came.viewbguilib.ButtonBgUi
+            android:id="@+id/openBanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Banner|搜索sqlite数据库"
+            android:textSize="18sp"
+            android:textColor="#f7964f"
+            app:raoundRadius="5dp"
+            app:strokeColor="#f7964f"
+            app:strokeWidth="2dp"
+            app:selectStrokeColor="#1fde94"
+            android:background="#ffffff"
+            tools:ignore="DuplicateIds" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="打开Banner"/>
-    <Button
-        android:id="@+id/openSPSearch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SP历史记录"/>
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/openSPSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SP历史记录"/>
+        <Button
+            android:id="@+id/openMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="baidu地图"/>
+
+       <Button
+            android:id="@+id/openMapMark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="地图定位"/>
+        <Button
+           android:id="@+id/openGreenDao"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="GreenDao"/>
+    </LinearLayout>
 </LinearLayout>

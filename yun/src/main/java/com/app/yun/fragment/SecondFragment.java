@@ -9,10 +9,14 @@ import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
 
+import com.app.yun.GreenDaoActivity;
 import com.app.yun.R;
 import com.app.yun.banner.BannerActivity;
 import com.app.yun.banner.SPSearchActivity;
 import com.app.yun.echart.EchartsActivity;
+import com.app.yun.map.MapActivity;
+import com.app.yun.map.MarkerDemo;
+
 
 public class SecondFragment extends Fragment {
 
@@ -25,8 +29,11 @@ public class SecondFragment extends Fragment {
     @Override
     public void onViewCreated(View view,Bundle savedInstanceState) {
         Button openEcharts = getActivity().findViewById(R.id.openEcharts);
-        Button openBanner = getActivity().findViewById(R.id.openBanner);
+        com.came.viewbguilib.ButtonBgUi openBanner = getActivity().findViewById(R.id.openBanner);
         Button openSPSearch = getActivity().findViewById(R.id.openSPSearch);
+        Button openMap = getActivity().findViewById(R.id.openMap);
+        Button openMapMark = getActivity().findViewById(R.id.openMapMark);
+        Button openGreenDao = getActivity().findViewById(R.id.openGreenDao);
         openEcharts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,6 +52,27 @@ public class SecondFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent= new Intent(getActivity(), SPSearchActivity.class);
+                startActivity(intent);
+            }
+        });
+        openMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(getActivity(), MapActivity.class);
+                startActivity(intent);
+            }
+        });
+        openMapMark.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(getActivity(), MarkerDemo.class);
+                startActivity(intent);
+            }
+        });
+        openGreenDao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(getActivity(), GreenDaoActivity.class);
                 startActivity(intent);
             }
         });

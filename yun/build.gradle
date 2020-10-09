@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'org.greenrobot.greendao'
+
+repositories {
+    flatDir {
+        dir 'libs'
+    }
+}
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.0"
@@ -25,6 +33,7 @@ android {
     buildTypes {
         release {
             minifyEnabled false
+            //BaiduMap SDK 相关的内容不应该被混淆，所以我们需要配置混淆文件
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -66,8 +75,16 @@ dependencies {
     annotationProcessor'com.alibaba:arouter-compiler:1.2.2'
     //选项卡
     implementation 'com.google.android.material:material:1.2.0'
-
+    implementation files('libs\\BaiduLBS_Android.jar')
+    //GreenDao数据库
+    implementation 'org.greenrobot:greendao:3.2.2'
+    //数据库查看工具
+    debugImplementation  'com.amitshekhar.android:debug-db:1.0.6'
 }
-repositories {
-    mavenCentral()
+
+
+greendao {
+    schemaVersion 1
+    daoPackage 'GreenDao'
+    targetGenDir 'src/main/java'
 }

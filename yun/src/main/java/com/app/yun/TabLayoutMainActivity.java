@@ -5,7 +5,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.app.yun.fragment.FirstFragment;
@@ -54,6 +54,16 @@ public class TabLayoutMainActivity extends AppCompatActivity {
 
         //使用适配器将ViewPager与Fragment绑定在一起
         viewPager.setAdapter(new MyFragmentPagerAdapter(getSupportFragmentManager()));
+
+        /**
+         *  解决viewpage切换fragment时数据丢失问题
+         *  1、设置ViewPage缓存界面数
+         *  说明：若果我们设定mOffscreenPageLimit＝１，则当我们我们滑到第三个页面的时候，
+         *  第一个页面的视图将被销毁，当我们滑到第一个页面时，第三个页面的视图会被销毁。
+         *  但滑到第二个页面时，三个界面的视图都不会销毁。
+         */
+       // viewPager.setOffscreenPageLimit(title.length-1);
+
         //将TabLayout与ViewPager绑定
         tabLayout.setupWithViewPager(viewPager);
 
@@ -99,7 +109,13 @@ public class TabLayoutMainActivity extends AppCompatActivity {
     }
 
     //自定义适配器
-    public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
+    /**
+     *  解决viewpage切换fragment时数据丢失问题
+     *  2、将FragmentPagerAdapter修改继承FragmentStatePagerAdapter
+     *  说明：FragmentPagerAdapter创建完fragment就不会销毁，所以会导致再次进入就不会重新创建，
+     *  FragmentStatePagerAdapter则不会
+     */
+    public class MyFragmentPagerAdapter extends FragmentStatePagerAdapter {
         public MyFragmentPagerAdapter(FragmentManager fm) {
             super(fm);
         }

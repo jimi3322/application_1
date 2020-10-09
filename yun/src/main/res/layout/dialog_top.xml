@@ -15,7 +15,7 @@
             android:layout_height="48dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:src="@mipmap/icon_ccb" />
+            android:src="@mipmap/map_logo" />
 
         <TextView
             android:layout_width="match_parent"
