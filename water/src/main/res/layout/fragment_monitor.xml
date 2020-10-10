@@ -1,0 +1,26 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="vertical"
+    android:fadingEdge="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/commonPageColor"
+        android:orientation="vertical"
+        tools:context="com.wayeal.newair.monitor.MonitorFragment"
+        android:fitsSystemWindows="true"
+        >
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/common_blue_tablayout"/>
+
+
+    </LinearLayout>
+
+
+</ScrollView>
