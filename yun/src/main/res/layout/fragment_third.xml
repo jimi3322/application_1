@@ -3,37 +3,83 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fff"
-    android:gravity="center" >
+    >
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:id="@+id/ll_view"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="horizontal">
         <Button
             android:id="@+id/top_dialog"
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_width="0dp"
             android:text="顶部提醒"
             android:background="@color/task_list_filter_blue_color"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"/>
         <Button
             android:id="@+id/view_dialog"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:width="0dp"
             android:text="view版"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:layout_weight="1" />
         <Button
             android:id="@+id/d_dialog"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_width="0dp"
             android:text="dialog版"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"/>
         <Button
             android:id="@+id/buttom_dialog"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:text="底部弹窗"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="70dp"
+        >
+        <ImageView
+            android:id="@+id/PicName_title_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="底部弹窗"
-            android:layout_marginTop="10dp"/>
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/icon_must_fill"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            />
+        <TextView
+            android:id="@+id/formPicName"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:text="1111"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/formPicList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="15dp"
+            android:layout_below="@id/formPicName"
+            />
+
     </LinearLayout>
 
 </RelativeLayout>

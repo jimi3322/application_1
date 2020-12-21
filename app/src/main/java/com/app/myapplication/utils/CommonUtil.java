@@ -2,6 +2,8 @@ package com.app.myapplication.utils;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Rect;
 import android.text.TextUtils;
 
 import com.app.myapplication.BaseApplication;
@@ -12,6 +14,9 @@ import com.google.gson.Gson;
 
 import org.json.JSONObject;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.text.SimpleDateFormat;
@@ -251,5 +256,55 @@ public class CommonUtil {
         } catch (Exception e) {
             throw new Exception("MD5加密出现错误，"+e.toString());
         }
+    }
+
+    /**
+     * 压缩图片
+     * */
+    public static void compressBmpFileToTargetSize(File file, Long targetSize){
+        if (file.length() > targetSize){
+            int ratio = 2;
+            BitmapFactory.Options options = new BitmapFactory.Options();
+            Bitmap bitmap = BitmapFactory.decodeFile(file.getAbsolutePath(),options);
+            int targetWidth = options.outWidth / ratio;
+            int targetHeight = options.outHeight / ratio;
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            int quality = 100;
+            Bitmap resultBitmap = generateScaledBmp(bitmap,targetWidth,targetHeight,baos,quality);
+            int count = 0;
+            while (baos.size() > targetSize && count <= 10){
+                targetWidth /= ratio;
+                targetHeight /= ratio;
+                count ++;
+                baos.reset();
+                resultBitmap = generateScaledBmp(resultBitmap,targetWidth,targetHeight,baos,quality);
+            }
+            try {
+                FileOutputStream fos = new FileOutputStream(file);
+                fos.write(baos.toByteArray());
+                fos.flush();
+                fos.close();
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private static Bitmap generateScaledBmp(Bitmap srcBmp
+            ,int targetWidth
+            ,int targetHeight
+            ,ByteArrayOutputStream baos
+            ,int quality){
+        Bitmap result = Bitmap.createBitmap(targetWidth
+                ,targetHeight
+                ,Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(result);
+        Rect rect = new Rect(0,0,result.getWidth(),result.getHeight());
+        canvas.drawBitmap(srcBmp,null,rect,null);
+        if (!srcBmp.isRecycled()){
+            srcBmp.recycle();
+        }
+        result.compress(Bitmap.CompressFormat.JPEG,quality,baos);
+        return result;
     }
 }

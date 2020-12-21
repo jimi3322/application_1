@@ -80,6 +80,8 @@ dependencies {
     implementation 'org.greenrobot:greendao:3.2.2'
     //数据库查看工具
     debugImplementation  'com.amitshekhar.android:debug-db:1.0.6'
+    //相机
+    compile 'com.github.chrisbanes:PhotoView:2.0.0'
 }
 
 
