@@ -7,18 +7,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.TextView
-import androidx.constraintlayout.widget.ConstraintLayout
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.app.yun.R
-import com.app.yun.tree.utils.ScreenUtils
-import kotlinx.android.synthetic.main.item_recyclerview_tree.view.*
+import kotlinx.android.synthetic.main.item_recyclerview_tree_level0.view.*
 import java.util.LinkedList
 
 
 /**
  * Created by KaelLi on 2018/11/26.
  */
-class TreeAdapter(private val mContext: Context, list: List<TreeItem>) :
+class TreeAdapter(val mContext: Context, list: List<TreeItem>) :
     RecyclerView.Adapter<TreeAdapter.ViewHolder>(), TreeStateChangeListener {
     private val mList: MutableList<TreeItem>
 
@@ -38,14 +37,43 @@ class TreeAdapter(private val mContext: Context, list: List<TreeItem>) :
         }
     }
 
-    override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
-        return ViewHolder(
+    //改变不同的item布局
+    //return    int型标志，传递给onCreateViewHolder的第二个参数
+    override fun getItemViewType(position: Int): Int {
+        return mList.get(position).itemLevel
+    }
+
+    //viewType 标志，我们根据该标志可以实现渲染不同类型的ViewHolder
+    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
+        Log.e("xq", "viewType = $viewType")
+        var view: View? = null
+        if (viewType === 0) {
+            view = LayoutInflater.from(viewGroup.getContext())
+                .inflate(R.layout.item_recyclerview_tree_level0, viewGroup, false)
+            return ViewHolder(view)
+        } else if (viewType === 1) {
+            view = LayoutInflater.from(viewGroup.getContext())
+                .inflate(R.layout.item_recyclerview_tree_level1, viewGroup, false)
+            return ViewHolder(view)
+        }else if(viewType === 2){
+            view = LayoutInflater.from(viewGroup.getContext())
+                .inflate(R.layout.item_recyclerview_tree_level2, viewGroup, false)
+            return ViewHolder(view)
+        }else if(viewType >= 3){
+            view = LayoutInflater.from(viewGroup.getContext())
+                .inflate(R.layout.item_recyclerview_tree_level2, viewGroup, false)
+            return ViewHolder(view)
+        }
+        return ViewHolder(view!!)
+
+
+        /*return ViewHolder(
             LayoutInflater.from(mContext).inflate(
-                R.layout.item_recyclerview_tree,
+                R.layout.item_recyclerview_tree_level0,
                 viewGroup,
                 false
             )
-        )
+        )*/
     }
 
 
@@ -53,6 +81,8 @@ class TreeAdapter(private val mContext: Context, list: List<TreeItem>) :
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
         val treeItem = mList[position]
         viewHolder.mTextView!!.text = treeItem.title
+
+        //分割线的显示
         if (position == mList.size - 1) {
             viewHolder.mDivider!!.visibility = View.VISIBLE
         } else if (mList[position + 1].itemLevel == 0) {
@@ -92,6 +122,10 @@ class TreeAdapter(private val mContext: Context, list: List<TreeItem>) :
             treeItem.itemCheck = !treeItem.itemCheck
             checkChild(treeItem,treeItem.itemCheck)
             notifyDataSetChanged()
+        }
+        viewHolder.mTextView?.setOnClickListener {
+            Log.e("xq", "title = ${treeItem.title}")
+            Toast.makeText(mContext,"${treeItem.title}",Toast.LENGTH_SHORT).show()
         }
     }
 
