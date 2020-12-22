@@ -16,6 +16,7 @@ import com.app.yun.banner.SPSearchActivity;
 import com.app.yun.echart.EchartsActivity;
 import com.app.yun.map.MapActivity;
 import com.app.yun.map.MarkerDemo;
+import com.app.yun.tree.TreeRecyclerViewActivity;
 
 
 public class SecondFragment extends Fragment {
@@ -34,6 +35,7 @@ public class SecondFragment extends Fragment {
         Button openMap = getActivity().findViewById(R.id.openMap);
         Button openMapMark = getActivity().findViewById(R.id.openMapMark);
         Button openGreenDao = getActivity().findViewById(R.id.openGreenDao);
+        Button treeRecyclerView = getActivity().findViewById(R.id.treeRecyclerView);
         openEcharts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,6 +75,14 @@ public class SecondFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent= new Intent(getActivity(), GreenDaoActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        treeRecyclerView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(getActivity(), TreeRecyclerViewActivity.class);
                 startActivity(intent);
             }
         });

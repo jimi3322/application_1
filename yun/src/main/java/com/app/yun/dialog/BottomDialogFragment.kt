@@ -1,33 +1,11 @@
 package com.app.yun.dialog
 
-import android.Manifest
-import android.app.Activity
-import android.content.Intent
-import android.content.pm.PackageManager
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.graphics.drawable.ColorDrawable
-import android.net.Uri
-import android.os.Build
 import android.os.Bundle
-import android.os.Environment
-import android.provider.MediaStore
-import android.util.Log
 import android.view.*
-import android.widget.Toast
-import androidx.core.app.ActivityCompat
-import androidx.core.content.FileProvider
 import androidx.fragment.app.DialogFragment
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.app.myapplication.utils.CommonUtil
 import com.app.yun.R
-import com.app.yun.photo.PhotoActivity
-import com.wayeal.thirdpartyoperation.view.Pic
 import kotlinx.android.synthetic.main.dialog_buttom.*
-import java.io.File
-import java.text.SimpleDateFormat
-import java.util.*
 
 
 class BottomDialogFragment : DialogFragment() {

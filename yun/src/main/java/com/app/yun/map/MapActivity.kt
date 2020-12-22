@@ -17,6 +17,8 @@ import com.baidu.location.LocationClientOption
 import com.baidu.mapapi.map.*
 import com.baidu.mapapi.model.LatLng
 import kotlinx.android.synthetic.main.activity_map.*
+import kotlinx.android.synthetic.main.activity_marker.*
+import kotlinx.android.synthetic.main.activity_marker.mMapView
 
 
 class MapActivity : BaseActivity() , SensorEventListener {

@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.app.myapplication.R
-import com.app.myapplication.common.App
+import com.app.myapplication.common.AppDatas
 import com.app.myapplication.common.HttpUtil
 import com.app.myapplication.service.MyIntentService
 import com.app.myapplication.service.MyService
@@ -167,8 +167,8 @@ class ContactActivity : AppCompatActivity(), View.OnClickListener {
     }
     private fun parseJSONWitnGSON(jsonData:String){
         val gson = Gson()
-        val typeOf = object : TypeToken<List<App>>(){}.type
-        val appList = gson.fromJson<List<App>>(jsonData,typeOf)
+        val typeOf = object : TypeToken<List<AppDatas>>(){}.type
+        val appList = gson.fromJson<List<AppDatas>>(jsonData,typeOf)
         val sentence = StringBuilder().apply{
             for (app in appList){
                 val item = "id is ${app.id},name is ${app.name},version is ${app.version}"

@@ -67,6 +67,7 @@
         <activity android:name=".map.MarkerDemo"/>
         <activity android:name=".GreenDaoActivity"/>
         <activity android:name=".dialog.ShowPictureActivity"/>
+        <activity android:name=".tree.TreeRecyclerViewActivity"/>
 
         <activity android:name=".TabLayoutMainActivity">
             <intent-filter>
